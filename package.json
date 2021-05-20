@@ -1,0 +1,29 @@
+{
+  "name": "backEnd",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node -r dotenv/config app.js",
+    "createTable": "node db/scripts/createTable.js",
+    "populateTable": "node db/scripts/populateTable.js",
+    "dropTable": "node db/scripts/dropTable.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Beckster6211/RecommendToBeckyBackEnd.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Beckster6211/RecommendToBeckyBackEnd/issues"
+  },
+  "homepage": "https://github.com/Beckster6211/RecommendToBeckyBackEnd#readme",
+  "dependencies": {
+    "dotenv": "^9.0.2",
+    "express": "^4.17.1",
+    "pg": "^8.6.0"
+  }
+}
