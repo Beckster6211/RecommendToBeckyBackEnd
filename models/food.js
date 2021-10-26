@@ -3,10 +3,36 @@ const { food } = require("../food");
 
 async function getAllFood() {
   const result = await query(`SELECT * FROM foodTable`);
-  console.log(result.rows);
+  // console.log(result.rows);
   return result.rows;
+}
+
+async function addFood(food) {
+  // console.log({ food });
+  let foodName = food.food;
+  // console.log({ foodName });
+  let foodDone = food.isdone;
+  // console.log({ foodDone });
+  const result = await query(
+    `INSERT INTO foodTable(food, isDone) 
+    VALUES ($1, $2) RETURNING *;`,
+    [foodName, foodDone]
+  );
+  // console.log(result);
+  // console.log(result.rows);
+  return result.rows;
+}
+
+async function deleteFood(id) {
+  const result = await query(
+    `DELETE FROM foodTable WHERE id = $1 RETURNING id`,
+    [id]
+  );
+  return result.rows[0];
 }
 
 module.exports = {
   getAllFood,
+  addFood,
+  deleteFood,
 };

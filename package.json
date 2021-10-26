@@ -4,10 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node -r dotenv/config app.js",
-    "createTable": "node db/scripts/createTable.js",
-    "populateTable": "node db/scripts/populateTable.js",
-    "dropTable": "node db/scripts/dropTable.js",
+    "start": "nodemon -r dotenv/config app.js",
+    "create-table": "node db/scripts/createTable.js",
+    "populate-table": "node db/scripts/populateTable.js",
+    "drop-table": "node db/scripts/dropTable.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -22,8 +22,12 @@
   },
   "homepage": "https://github.com/Beckster6211/RecommendToBeckyBackEnd#readme",
   "dependencies": {
+    "cors": "^2.8.5",
     "dotenv": "^9.0.2",
     "express": "^4.17.1",
     "pg": "^8.6.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.14"
   }
 }
