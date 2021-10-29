@@ -16,9 +16,9 @@ router.get("/", async (req, res, next) => {
 router.post("/", async (req, res, next) => {
   try {
     const data = req.body;
-    // console.log({ data });
+    console.log({ data });
     const newFood = await addFood(data);
-    // console.log({ newFood });
+    console.log({ newFood });
     res.json({ success: true, payload: newFood });
   } catch (err) {
     console.log(err);
