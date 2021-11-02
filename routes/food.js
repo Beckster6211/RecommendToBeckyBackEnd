@@ -46,9 +46,9 @@ router.patch("/:id", async (req, res, next) => {
   try {
     let id = req.params.id;
     let update = req.body;
-    console.log(update);
+    // console.log(update);
     let updatedFood = await updateFood(id, update);
-    console.log(updatedFood);
+    // console.log(updatedFood);
     res.json({ success: true, payload: updatedFood });
   } catch (error) {
     console.log(error);
