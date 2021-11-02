@@ -31,8 +31,18 @@ async function deleteFood(id) {
   return result.rows[0];
 }
 
+async function updateFood(id, updatedFood) {
+  const { food, isdone } = updatedFood;
+  const result = await query(
+    `UPDATE foodTable SET food = $2, isDone = $3 WHERE id = $1 RETURNING *`,
+    [id, food, isdone]
+  );
+  return result.rows;
+}
+
 module.exports = {
   getAllFood,
   addFood,
   deleteFood,
+  updateFood,
 };
