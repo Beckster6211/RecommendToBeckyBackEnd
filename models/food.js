@@ -13,10 +13,12 @@ async function addFood(food) {
   // console.log({ foodName });
   let foodDone = food.isdone;
   // console.log({ foodDone });
+  let recommendedBy = food.recommendedby;
+  console.log({ recommendedBy });
   const result = await query(
-    `INSERT INTO foodTable(food, isDone) 
-    VALUES ($1, $2) RETURNING *;`,
-    [foodName, foodDone]
+    `INSERT INTO foodTable(food, isDone, recommendedBy) 
+    VALUES ($1, $2, $3) RETURNING *;`,
+    [foodName, foodDone, recommendedBy]
   );
   // console.log(result);
   // console.log(result.rows);
