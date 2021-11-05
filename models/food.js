@@ -8,20 +8,20 @@ async function getAllFood() {
 }
 
 async function addFood(food) {
-  // console.log({ food });
+  console.log({ food });
   let foodName = food.food;
-  // console.log({ foodName });
-  let foodDone = food.isdone;
-  // console.log({ foodDone });
-  let recommendedBy = food.recommendedby;
+  console.log({ foodName });
+  let recommendedBy = food.recommendedBy;
   console.log({ recommendedBy });
+  let foodDone = false;
+  console.log({ foodDone });
   const result = await query(
-    `INSERT INTO foodTable(food, isDone, recommendedBy) 
+    `INSERT INTO foodTable(food, recommendedBy, isDone) 
     VALUES ($1, $2, $3) RETURNING *;`,
-    [foodName, foodDone, recommendedBy]
+    [foodName, recommendedBy, foodDone]
   );
   // console.log(result);
-  // console.log(result.rows);
+  console.log(result.rows);
   return result.rows;
 }
 
