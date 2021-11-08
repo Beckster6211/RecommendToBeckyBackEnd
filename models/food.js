@@ -11,14 +11,16 @@ async function addFood(food) {
   console.log({ food });
   let foodName = food.food;
   console.log({ foodName });
-  let recommendedBy = food.recommendedBy;
+  let recommendedBy = food.recommendedby;
   console.log({ recommendedBy });
   let foodDone = false;
   console.log({ foodDone });
+  let beckyOpinion = "null";
+  console.log({ beckyOpinion });
   const result = await query(
-    `INSERT INTO foodTable(food, recommendedBy, isDone) 
-    VALUES ($1, $2, $3) RETURNING *;`,
-    [foodName, recommendedBy, foodDone]
+    `INSERT INTO foodTable(food, recommendedBy, beckyOpinion, isDone) 
+    VALUES ($1, $2, $3, $4) RETURNING *;`,
+    [foodName, recommendedBy, beckyOpinion, foodDone]
   );
   // console.log(result);
   console.log(result.rows);

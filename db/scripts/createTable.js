@@ -4,6 +4,7 @@ let sqlStatement = `CREATE TABLE IF NOT EXISTS foodTable(
     id SERIAL PRIMARY KEY, 
     food TEXT,
     recommendedBy TEXT,
+    beckyOpinion TEXT,
     isDone BOOLEAN
 );`;
 
