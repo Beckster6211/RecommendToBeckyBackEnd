@@ -3,25 +3,25 @@ let food = [
     food: "Deep fried Mars bar",
     recommendedBy: "Max bootcamp4",
     isDone: false,
-    beckyOpinion: "null",
+    beckyOpinion: "🤷‍♀️",
   },
   {
     food: "US Biscuits",
     recommendedBy: "Liz.K SoC Coach",
     isDone: false,
-    beckyOpinion: "null",
+    beckyOpinion: "🤷‍♀️",
   },
   {
     food: "Sushi",
     recommendedBy: "Emma bootcamp4",
     isDone: false,
-    beckyOpinion: "null",
+    beckyOpinion: "🤷‍♀️",
   },
   {
     food: "Tofu",
     recommendedBy: "Amy B13 Technology",
     isDone: false,
-    beckyOpinion: "null",
+    beckyOpinion: "🤷‍♀️",
   },
 ];
 

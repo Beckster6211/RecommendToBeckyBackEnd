@@ -11,11 +11,11 @@ async function addFood(food) {
   console.log({ food });
   let foodName = food.food;
   console.log({ foodName });
-  let recommendedBy = food.recommendedby;
+  let recommendedBy = food.recommendedBy;
   console.log({ recommendedBy });
   let foodDone = false;
   console.log({ foodDone });
-  let beckyOpinion = "null";
+  let beckyOpinion = "🤷‍♀️";
   console.log({ beckyOpinion });
   const result = await query(
     `INSERT INTO foodTable(food, recommendedBy, beckyOpinion, isDone) 
