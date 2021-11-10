@@ -1,7 +1,7 @@
 let food = [
   {
     food: "Deep fried Mars bar",
-    recommendedBy: "Max bootcamp4",
+    recommendedBy: "Max bootcamp 4",
     isDone: false,
     beckyOpinion: "🤷‍♀️",
   },
@@ -13,7 +13,7 @@ let food = [
   },
   {
     food: "Sushi",
-    recommendedBy: "Emma bootcamp4",
+    recommendedBy: "Emma bootcamp 4",
     isDone: false,
     beckyOpinion: "🤷‍♀️",
   },
