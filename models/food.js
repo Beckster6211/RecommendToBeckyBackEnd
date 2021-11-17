@@ -39,10 +39,10 @@ async function deleteFood(id) {
 }
 
 async function updateFood(id, updatedFood) {
-  const { food, recommendedby, beckyopinion, isdone } = updatedFood;
+  const { food, recipe, recommendedby, beckyopinion, isdone } = updatedFood;
   const result = await query(
-    `UPDATE foodTable SET food = $2, recommendedBy = $3, beckyOpinion = $4, isDone = $5 WHERE id = $1 RETURNING *`,
-    [id, food, recommendedby, beckyopinion, isdone]
+    `UPDATE foodTable SET food = $2, recipe = $3, recommendedBy = $4, beckyOpinion = $5, isDone = $6 WHERE id = $1 RETURNING *`,
+    [id, food, recipe, recommendedby, beckyopinion, isdone]
   );
   return result.rows;
 }
