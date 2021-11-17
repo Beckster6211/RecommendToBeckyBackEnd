@@ -5,9 +5,9 @@
   "main": "index.js",
   "scripts": {
     "start": "nodemon -r dotenv/config app.js",
-    "create-table": "node db/scripts/createTable.js",
-    "populate-table": "node db/scripts/populateTable.js",
-    "drop-table": "node db/scripts/dropTable.js",
+    "create-food-table": "node db/scripts/createFoodTable.js",
+    "populate-food-table": "node db/scripts/populateFoodTable.js",
+    "drop-food-table": "node db/scripts/dropFoodTable.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
