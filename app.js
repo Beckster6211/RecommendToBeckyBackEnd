@@ -6,7 +6,7 @@ const port = 3001;
 const foodRouter = require("./routes/food");
 
 app.get("/", (req, res) => {
-  res.send("Hello World");
+  res.send("Hello World!");
 });
 
 app.use(cors());
