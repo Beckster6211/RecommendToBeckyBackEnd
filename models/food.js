@@ -11,7 +11,7 @@ async function addFood(food) {
   console.log({ food });
   let foodName = food.food;
   console.log({ foodName });
-  let recipe = food.where;
+  let recipe = food.recipe;
   console.log({ recipe });
   let recommendedBy = food.recommendedBy;
   console.log({ recommendedBy });
