@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon -r dotenv/config ./bin/www",
+    "start": "node -r dotenv/config ./bin/www",
     "create-food-table": "node db/scripts/createFoodTable.js",
     "populate-food-table": "node db/scripts/populateFoodTable.js",
     "drop-food-table": "node db/scripts/dropFoodTable.js",
