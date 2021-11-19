@@ -18,3 +18,5 @@ app.use("/food", foodRouter);
 app.listen(port, () => {
   console.log(`App listening at http://localhost:${port}`);
 });
+
+// app.listen(process.env.PORT || 3000);
