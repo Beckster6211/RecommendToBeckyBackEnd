@@ -27,6 +27,13 @@ let food = [
     isDone: false,
     beckyOpinion: "🤷‍♀️",
   },
+  {
+    food: "Smores",
+    recipe: "Kit from store",
+    recommendedBy: "Me (+ American TV)",
+    isDone: false,
+    beckyOpinion: "🤷‍♀️",
+  },
 ];
 
 module.exports = food;
