@@ -1,4 +1,4 @@
-let { query } = require("../index.js");
+let { query } = require("../../index");
 
 let statement = `DROP TABLE IF EXISTS foodTable`;
 

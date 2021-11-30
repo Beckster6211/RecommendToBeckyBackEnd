@@ -1,5 +1,5 @@
-let { query } = require("../index");
-let food = require("../../food");
+let { query } = require("../../index");
+let food = require("../../../food");
 
 const text = `INSERT INTO foodTable(food, recipe, recommendedBy, beckyOpinion, isDone) VALUES($1, $2, $3, $4, $5)`;
 
