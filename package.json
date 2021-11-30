@@ -8,6 +8,9 @@
     "create-food-table": "node db/scripts/food/createFoodTable.js",
     "populate-food-table": "node db/scripts/food/populateFoodTable.js",
     "drop-food-table": "node db/scripts/food/dropFoodTable.js",
+    "create-visit-table": "node db/scripts/visit/createVisitTable.js",
+    "populate-visit-table": "node db/scripts/visit/populateVisitTable.js",
+    "drop-visit-table": "node db/scripts/visit/dropVisitTable.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
