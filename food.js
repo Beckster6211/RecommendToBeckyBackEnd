@@ -2,7 +2,7 @@ let food = [
   {
     food: "Deep fried Mars bar",
     recipe: "At this rate Scotland",
-    recommendedBy: "Max bootcamp 4",
+    recommendedBy: "Max Bootcamp 4",
     isDone: false,
     beckyOpinion: "🤷‍♀️",
   },
@@ -16,7 +16,7 @@ let food = [
   {
     food: "Sushi",
     recipe: "can't remember",
-    recommendedBy: "Emma bootcamp 4",
+    recommendedBy: "Emma Bootcamp 4",
     isDone: false,
     beckyOpinion: "🤷‍♀️",
   },
