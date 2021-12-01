@@ -1,7 +1,7 @@
 const express = require("express");
 const app = express();
 const cors = require("cors");
-var cookieParser = require("cookie-parser");
+// var cookieParser = require("cookie-parser");
 // var bodyParser = require('body-parser')
 const port = 3001;
 
@@ -15,7 +15,7 @@ app.get("/", (req, res) => {
 app.use(cors());
 
 app.use(express.json());
-app.use(cookieParser());
+// app.use(cookieParser());
 
 app.use("/food", foodRouter);
 app.use("/visit", visitRouter);
