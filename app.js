@@ -20,9 +20,9 @@ app.use(express.json());
 app.use("/food", foodRouter);
 app.use("/visit", visitRouter);
 
-// app.listen(port, () => {
-//   console.log(`App listening at http://localhost:${port}`);
-// });
+app.listen(port, () => {
+  console.log(`App listening at http://localhost:${port}`);
+});
 
-app.listen(process.env.PORT || 3000);
-module.exports = app;
+// app.listen(process.env.PORT || 3000);
+// module.exports = app;
