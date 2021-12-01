@@ -1,5 +1,5 @@
 const { query } = require("../db");
-const { food } = require("../food");
+// const { food } = require("../data/food");
 
 async function getAllFood() {
   const result = await query(`SELECT * FROM foodTable`);
