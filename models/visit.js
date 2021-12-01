@@ -41,12 +41,16 @@ async function deleteVisit(id) {
 }
 
 async function updateVisit(id, updatedVisit) {
-  const { what, location, why, recommendedBy, beckyOpinion, visited } =
+  // console.log("inside models");
+  const { what, location, why, recommendedby, beckyopinion, visited } =
     updatedVisit;
+  // console.log({ updatedVisit });
   const result = await query(
     `UPDATE visitTable SET what = $2, location = $3, why = $4, recommendedBy = $5, beckyOpinion = $6, visited = $7 WHERE id = $1 RETURNING *`,
-    [id, what, location, why, recommendedBy, beckyOpinion, visited]
+    [id, what, location, why, recommendedby, beckyopinion, visited]
   );
+  // console.log("result.rows");
+  // console.log(result.rows);
   return result.rows;
 }
 

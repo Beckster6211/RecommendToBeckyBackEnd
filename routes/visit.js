@@ -44,11 +44,13 @@ router.delete("/:id", async (req, res, next) => {
 
 router.patch("/:id", async (req, res, next) => {
   try {
+    // console.log("inside route");
     let id = req.params.id;
     let update = req.body;
-    // console.log(update);
+    // console.log("patch request");
+    // console.log({ update });
     let updatedVisit = await updateVisit(id, update);
-    // console.log(updatedFood);
+    // console.log({ updatedVisit });
     res.json({ success: true, payload: updatedVisit });
   } catch (error) {
     console.log(error);
