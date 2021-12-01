@@ -1,5 +1,5 @@
 let { query } = require("../../index");
-let visit = require("../../../visit");
+let visit = require("../../../data/visit");
 
 const text = `INSERT INTO visitTable(what, location, why, recommendedBy, beckyOpinion, visited) VALUES($1, $2, $3, $4, $5, $6)`;
 
