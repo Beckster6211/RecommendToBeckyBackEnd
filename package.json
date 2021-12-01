@@ -25,6 +25,8 @@
   },
   "homepage": "https://github.com/Beckster6211/RecommendToBeckyBackEnd#readme",
   "dependencies": {
+    "body-parser": "^1.19.0",
+    "cookie-parser": "^1.4.6",
     "cors": "^2.8.5",
     "dotenv": "^9.0.2",
     "express": "^4.17.1",
