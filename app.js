@@ -7,6 +7,7 @@ const port = 3001;
 
 const foodRouter = require("./routes/food");
 const visitRouter = require("./routes/visit");
+const stayRouter = require("./routes/stay");
 
 app.get("/", (req, res) => {
   res.send("Hello World!");
@@ -19,6 +20,7 @@ app.use(express.json());
 
 app.use("/food", foodRouter);
 app.use("/visit", visitRouter);
+app.use("/stay", stayRouter);
 
 app.listen(port, () => {
   console.log(`App listening at http://localhost:${port}`);

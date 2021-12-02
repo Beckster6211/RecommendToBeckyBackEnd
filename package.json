@@ -11,6 +11,9 @@
     "create-visit-table": "node db/scripts/visit/createVisitTable.js",
     "populate-visit-table": "node db/scripts/visit/populateVisitTable.js",
     "drop-visit-table": "node db/scripts/visit/dropVisitTable.js",
+    "create-stay-table": "node db/scripts/stay/createStayTable.js",
+    "populate-stay-table": "node db/scripts/stay/populateStayTable.js",
+    "drop-stay-table": "node db/scripts/stay/dropStayTable.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
