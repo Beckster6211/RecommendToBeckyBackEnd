@@ -2,8 +2,7 @@ let stay = [
   {
     what: "Japan",
     location: "All of it",
-    details:
-      "Saw rugby world cup. Absolutely beautiful. So cultured. Careful of storms",
+    details: "Saw rugby world cup, absolutely beautiful. Careful of storms",
     recommendedBy: "Me + Hazie Bootcamp 4",
     stayed: false,
     beckyOpinion: "🤷‍♀️",
