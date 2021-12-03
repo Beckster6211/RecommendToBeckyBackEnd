@@ -63,10 +63,10 @@ async function updateRead(id, updatedRead) {
     author,
     connected,
     genre,
-    numberOfBooks,
+    numberofbooks,
     description,
-    recommendedBy,
-    beckyOpinion,
+    recommendedby,
+    beckyopinion,
     read,
   } = updatedRead;
   //   console.log({ updatedRead });
@@ -78,10 +78,10 @@ async function updateRead(id, updatedRead) {
       author,
       connected,
       genre,
-      numberOfBooks,
+      numberofbooks,
       description,
-      recommendedBy,
-      beckyOpinion,
+      recommendedby,
+      beckyopinion,
       read,
     ]
   );
