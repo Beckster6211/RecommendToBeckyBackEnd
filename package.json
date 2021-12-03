@@ -14,6 +14,9 @@
     "create-stay-table": "node db/scripts/stay/createStayTable.js",
     "populate-stay-table": "node db/scripts/stay/populateStayTable.js",
     "drop-stay-table": "node db/scripts/stay/dropStayTable.js",
+    "create-read-table": "node db/scripts/read/createReadTable.js",
+    "populate-read-table": "node db/scripts/read/populateReadTable.js",
+    "drop-read-table": "node db/scripts/read/dropReadTable.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
