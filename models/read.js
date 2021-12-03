@@ -55,24 +55,44 @@ async function deleteRead(id) {
   );
   return result.rows[0];
 }
-/*
-async function updateVisit(id, updatedVisit) {
-  // console.log("inside models");
-  const { what, location, why, recommendedby, beckyopinion, visited } =
-    updatedVisit;
-  // console.log({ updatedVisit });
+
+async function updateRead(id, updatedRead) {
+  //   console.log("inside models");
+  const {
+    book,
+    author,
+    connected,
+    genre,
+    numberOfBooks,
+    description,
+    recommendedBy,
+    beckyOpinion,
+    read,
+  } = updatedRead;
+  //   console.log({ updatedRead });
   const result = await query(
-    `UPDATE visitTable SET what = $2, location = $3, why = $4, recommendedBy = $5, beckyOpinion = $6, visited = $7 WHERE id = $1 RETURNING *`,
-    [id, what, location, why, recommendedby, beckyopinion, visited]
+    `UPDATE readTable SET book = $2, author = $3, connected = $4, genre = $5, numberOfBooks = $6, description = $7, recommendedBy = $8, beckyOpinion = $9, read = $10 WHERE id = $1 RETURNING *`,
+    [
+      id,
+      book,
+      author,
+      connected,
+      genre,
+      numberOfBooks,
+      description,
+      recommendedBy,
+      beckyOpinion,
+      read,
+    ]
   );
-  // console.log("result.rows");
-  // console.log(result.rows);
+  //   console.log("result.rows");
+  //   console.log(result.rows);
   return result.rows;
 }
-*/
+
 module.exports = {
   getAllRead,
   addRead,
   deleteRead,
-  //   updateVisit,
+  updateRead,
 };

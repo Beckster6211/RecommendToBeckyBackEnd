@@ -5,7 +5,7 @@ const {
   getAllRead,
   addRead,
   deleteRead,
-  //   updateVisit,
+  updateRead,
 } = require("../models/read");
 
 router.get("/", async (req, res, next) => {
@@ -41,7 +41,7 @@ router.delete("/:id", async (req, res, next) => {
   }
   next();
 });
-/*
+
 router.patch("/:id", async (req, res, next) => {
   try {
     // console.log("inside route");
@@ -49,13 +49,13 @@ router.patch("/:id", async (req, res, next) => {
     let update = req.body;
     // console.log("patch request");
     // console.log({ update });
-    let updatedVisit = await updateVisit(id, update);
-    // console.log({ updatedVisit });
-    res.json({ success: true, payload: updatedVisit });
+    let updatedRead = await updateRead(id, update);
+    // console.log({ updatedRead });
+    res.json({ success: true, payload: updatedRead });
   } catch (error) {
     console.log(error);
   }
   next();
 });
-*/
+
 module.exports = router;
