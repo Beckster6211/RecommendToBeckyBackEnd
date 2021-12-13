@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node -r dotenv/config app.js",
+    "start": "node -r dotenv/config ./bin/www",
     "create-food-table": "node db/scripts/food/createFoodTable.js",
     "populate-food-table": "node db/scripts/food/populateFoodTable.js",
     "drop-food-table": "node db/scripts/food/dropFoodTable.js",

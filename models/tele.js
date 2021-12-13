@@ -6,41 +6,41 @@ async function getAllTele() {
   // console.log(result.rows);
   return result.rows;
 }
-/*
-async function addRead(newRead) {
-  console.log({ newRead });
-  let readBook = newRead.book;
-  console.log({ readBook });
-  let readAuthor = newRead.author;
-  console.log({ readAuthor });
-  let readConnected = newRead.connected;
-  console.log({ readConnected });
-  let readGenre = newRead.genre;
-  console.log({ readGenre });
-  let readNumberOfBooks = newRead.numberOfBooks;
-  console.log({ readNumberOfBooks });
-  let readDescription = newRead.description;
-  console.log({ readDescription });
-  let recommendedBy = newRead.recommendedBy;
+
+async function addTele(newTele) {
+  console.log({ newTele });
+  let teleShow = newTele.tvShow;
+  console.log({ teleShow });
+  let teleProvider = newTele.provider;
+  console.log({ teleProvider });
+  let teleConnected = newTele.connected;
+  console.log({ teleConnected });
+  let teleGenre = newTele.genre;
+  console.log({ teleGenre });
+  let teleNumberOfSeries = newTele.numberOfSeries;
+  console.log({ teleNumberOfSeries });
+  let teleDescription = newTele.description;
+  console.log({ teleDescription });
+  let recommendedBy = newTele.recommendedBy;
   console.log({ recommendedBy });
-  let read = false;
-  console.log({ read });
+  let binged = false;
+  console.log({ binged });
   let beckyOpinion = "🤷‍♀️";
   console.log({ beckyOpinion });
 
   const result = await query(
-    `INSERT INTO readTable(book, author, connected, genre, numberOfBooks, description, recommendedBy, beckyOpinion, read)
+    `INSERT INTO teleTable(tvShow, provider, connected, genre, numberOfSeries, description, recommendedBy, beckyOpinion, binged)
     VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING *;`,
     [
-      readBook,
-      readAuthor,
-      readConnected,
-      readGenre,
-      readNumberOfBooks,
-      readDescription,
+      teleShow,
+      teleProvider,
+      teleConnected,
+      teleGenre,
+      teleNumberOfSeries,
+      teleDescription,
       recommendedBy,
       beckyOpinion,
-      read,
+      binged,
     ]
   );
   console.log(result);
@@ -48,51 +48,51 @@ async function addRead(newRead) {
   return result.rows;
 }
 
-async function deleteRead(id) {
+async function deleteTele(id) {
   const result = await query(
-    `DELETE FROM readTable WHERE id = $1 RETURNING id`,
+    `DELETE FROM teleTable WHERE id = $1 RETURNING id`,
     [id]
   );
   return result.rows[0];
 }
 
-async function updateRead(id, updatedRead) {
+async function updateTele(id, updatedTele) {
   //   console.log("inside models");
   const {
-    book,
-    author,
+    tvShow,
+    provider,
     connected,
     genre,
-    numberofbooks,
+    numberOfSeries,
     description,
-    recommendedby,
-    beckyopinion,
-    read,
-  } = updatedRead;
-  //   console.log({ updatedRead });
+    recommendedBy,
+    beckyOpinion,
+    binged,
+  } = updatedTele;
+  //   console.log({ updatedTele });
   const result = await query(
-    `UPDATE readTable SET book = $2, author = $3, connected = $4, genre = $5, numberOfBooks = $6, description = $7, recommendedBy = $8, beckyOpinion = $9, read = $10 WHERE id = $1 RETURNING *`,
+    `UPDATE teleTable SET tvShow = $2, provider = $3, connected = $4, genre = $5, numberOfSeries = $6, description = $7, recommendedBy = $8, beckyOpinion = $9, binged = $10 WHERE id = $1 RETURNING *`,
     [
       id,
-      book,
-      author,
+      tvShow,
+      provider,
       connected,
       genre,
-      numberofbooks,
+      numberOfSeries,
       description,
-      recommendedby,
-      beckyopinion,
-      read,
+      recommendedBy,
+      beckyOpinion,
+      binged,
     ]
   );
   //   console.log("result.rows");
   //   console.log(result.rows);
   return result.rows;
 }
-*/
+
 module.exports = {
   getAllTele,
-  //   addRead,
-  //   deleteRead,
-  //   updateRead,
+  addTele,
+  deleteTele,
+  updateTele,
 };

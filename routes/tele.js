@@ -3,9 +3,9 @@ const router = express.Router();
 
 const {
   getAllTele,
-  //   addRead,
-  //   deleteRead,
-  //   updateRead,
+  addTele,
+  deleteTele,
+  updateTele,
 } = require("../models/tele");
 
 router.get("/", async (req, res, next) => {
@@ -17,14 +17,14 @@ router.get("/", async (req, res, next) => {
   }
   next();
 });
-/*
+
 router.post("/", async (req, res, next) => {
   try {
     const data = req.body;
     console.log({ data });
-    const newRead = await addRead(data);
-    console.log({ newRead });
-    res.json({ success: true, payload: newRead });
+    const newTele = await addTele(data);
+    console.log({ newTele });
+    res.json({ success: true, payload: newTele });
   } catch (err) {
     console.log(err);
   }
@@ -34,8 +34,8 @@ router.post("/", async (req, res, next) => {
 router.delete("/:id", async (req, res, next) => {
   try {
     let id = req.params.id;
-    let delRead = await deleteRead(id);
-    res.json({ success: true, payload: delRead });
+    let delTele = await deleteTele(id);
+    res.json({ success: true, payload: delTele });
   } catch (err) {
     console.log(err);
   }
@@ -49,13 +49,13 @@ router.patch("/:id", async (req, res, next) => {
     let update = req.body;
     // console.log("patch request");
     // console.log({ update });
-    let updatedRead = await updateRead(id, update);
-    // console.log({ updatedRead });
-    res.json({ success: true, payload: updatedRead });
+    let updatedTele = await updateTele(id, update);
+    // console.log({ updatedTele });
+    res.json({ success: true, payload: updatedTele });
   } catch (error) {
     console.log(error);
   }
   next();
 });
-*/
+
 module.exports = router;
