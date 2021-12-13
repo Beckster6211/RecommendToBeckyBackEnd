@@ -26,9 +26,9 @@ app.use("/stay", stayRouter);
 app.use("/read", readRouter);
 app.use("/tele", teleRouter);
 
-app.listen(port, () => {
-  console.log(`App listening at http://localhost:${port}`);
-});
+// app.listen(port, () => {
+//   console.log(`App listening at http://localhost:${port}`);
+// });
 
-// app.listen(process.env.PORT || 3000);
-// module.exports = app;
+app.listen(process.env.PORT || 3000);
+module.exports = app;
