@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node -r dotenv/config ./bin/www",
+    "start": "node -r dotenv/config app.js",
     "create-food-table": "node db/scripts/food/createFoodTable.js",
     "populate-food-table": "node db/scripts/food/populateFoodTable.js",
     "drop-food-table": "node db/scripts/food/dropFoodTable.js",
@@ -17,6 +17,9 @@
     "create-read-table": "node db/scripts/read/createReadTable.js",
     "populate-read-table": "node db/scripts/read/populateReadTable.js",
     "drop-read-table": "node db/scripts/read/dropReadTable.js",
+    "create-tele-table": "node db/scripts/tv/createTeleTable.js",
+    "populate-tele-table": "node db/scripts/tv/populateTeleTable.js",
+    "drop-tele-table": "node db/scripts/tv/dropTeleTable.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

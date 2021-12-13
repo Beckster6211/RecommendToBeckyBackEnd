@@ -9,6 +9,7 @@ const foodRouter = require("./routes/food");
 const visitRouter = require("./routes/visit");
 const stayRouter = require("./routes/stay");
 const readRouter = require("./routes/read");
+const teleRouter = require("./routes/tele");
 
 app.get("/", (req, res) => {
   res.send("Hello World!");
@@ -23,6 +24,7 @@ app.use("/food", foodRouter);
 app.use("/visit", visitRouter);
 app.use("/stay", stayRouter);
 app.use("/read", readRouter);
+app.use("/tele", teleRouter);
 
 // app.listen(port, () => {
 //   console.log(`App listening at http://localhost:${port}`);
