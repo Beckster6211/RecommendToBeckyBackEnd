@@ -6,41 +6,38 @@ async function getAllFilm() {
   // console.log(result.rows);
   return result.rows;
 }
-/*
-async function addTele(newTele) {
-  console.log({ newTele });
-  let teleShow = newTele.tvShow;
-  console.log({ teleShow });
-  let teleProvider = newTele.provider;
-  console.log({ teleProvider });
-  let teleConnected = newTele.connected;
-  console.log({ teleConnected });
-  let teleGenre = newTele.genre;
-  console.log({ teleGenre });
-  let teleNumberOfSeries = newTele.numberOfSeries;
-  console.log({ teleNumberOfSeries });
-  let teleDescription = newTele.description;
-  console.log({ teleDescription });
-  let recommendedBy = newTele.recommendedBy;
+
+async function addFilm(newFilm) {
+  console.log({ newFilm });
+  let film = newFilm.film;
+  console.log({ film });
+  let filmProvider = newFilm.provider;
+  console.log({ filmProvider });
+  let filmConnected = newFilm.connected;
+  console.log({ filmConnected });
+  let filmGenre = newFilm.genre;
+  console.log({ filmGenre });
+  let filmDescription = newFilm.description;
+  console.log({ filmDescription });
+  let recommendedBy = newFilm.recommendedBy;
   console.log({ recommendedBy });
-  let binged = false;
-  console.log({ binged });
+  let watched = false;
+  console.log({ watched });
   let beckyOpinion = "🤷‍♀️";
   console.log({ beckyOpinion });
 
   const result = await query(
-    `INSERT INTO teleTable(tvShow, provider, connected, genre, numberOfSeries, description, recommendedBy, beckyOpinion, binged)
-    VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING *;`,
+    `INSERT INTO filmTable(film, provider, connected, genre, description, recommendedBy, beckyOpinion, watched)
+    VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING *;`,
     [
-      teleShow,
-      teleProvider,
-      teleConnected,
-      teleGenre,
-      teleNumberOfSeries,
-      teleDescription,
+      film,
+      filmProvider,
+      filmConnected,
+      filmGenre,
+      filmDescription,
       recommendedBy,
       beckyOpinion,
-      binged,
+      watched,
     ]
   );
   console.log(result);
@@ -48,51 +45,49 @@ async function addTele(newTele) {
   return result.rows;
 }
 
-async function deleteTele(id) {
+async function deleteFilm(id) {
   const result = await query(
-    `DELETE FROM teleTable WHERE id = $1 RETURNING id`,
+    `DELETE FROM filmTable WHERE id = $1 RETURNING id`,
     [id]
   );
   return result.rows[0];
 }
 
-async function updateTele(id, updatedTele) {
+async function updateFilm(id, updatedFilm) {
   //   console.log("inside models");
   const {
-    tvShow,
+    film,
     provider,
     connected,
     genre,
-    numberOfSeries,
     description,
     recommendedBy,
     beckyOpinion,
-    binged,
-  } = updatedTele;
+    watched,
+  } = updatedFilm;
   //   console.log({ updatedTele });
   const result = await query(
-    `UPDATE teleTable SET tvShow = $2, provider = $3, connected = $4, genre = $5, numberOfSeries = $6, description = $7, recommendedBy = $8, beckyOpinion = $9, binged = $10 WHERE id = $1 RETURNING *`,
+    `UPDATE filmTable SET film = $2, provider = $3, connected = $4, genre = $5, description = $6, recommendedBy = $7, beckyOpinion = $8, watched = $9 WHERE id = $1 RETURNING *`,
     [
       id,
-      tvShow,
+      film,
       provider,
       connected,
       genre,
-      numberOfSeries,
       description,
       recommendedBy,
       beckyOpinion,
-      binged,
+      watched,
     ]
   );
   //   console.log("result.rows");
   //   console.log(result.rows);
   return result.rows;
 }
-*/
+
 module.exports = {
   getAllFilm,
-  //   addTele,
-  //   deleteTele,
-  //   updateTele,
+  addFilm,
+  deleteFilm,
+  updateFilm,
 };

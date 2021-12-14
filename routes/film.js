@@ -3,9 +3,9 @@ const router = express.Router();
 
 const {
   getAllFilm,
-  //   addTele,
-  //   deleteTele,
-  //   updateTele,
+  addFilm,
+  deleteFilm,
+  updateFilm,
 } = require("../models/film");
 
 router.get("/", async (req, res, next) => {
@@ -17,14 +17,14 @@ router.get("/", async (req, res, next) => {
   }
   next();
 });
-/*
+
 router.post("/", async (req, res, next) => {
   try {
     const data = req.body;
     console.log({ data });
-    const newTele = await addTele(data);
-    console.log({ newTele });
-    res.json({ success: true, payload: newTele });
+    const newFilm = await addFilm(data);
+    console.log({ newFilm });
+    res.json({ success: true, payload: newFilm });
   } catch (err) {
     console.log(err);
   }
@@ -34,8 +34,8 @@ router.post("/", async (req, res, next) => {
 router.delete("/:id", async (req, res, next) => {
   try {
     let id = req.params.id;
-    let delTele = await deleteTele(id);
-    res.json({ success: true, payload: delTele });
+    let delFilm = await deleteFilm(id);
+    res.json({ success: true, payload: delFilm });
   } catch (err) {
     console.log(err);
   }
@@ -49,13 +49,13 @@ router.patch("/:id", async (req, res, next) => {
     let update = req.body;
     // console.log("patch request");
     // console.log({ update });
-    let updatedTele = await updateTele(id, update);
+    let updatedFilm = await updateFilm(id, update);
     // console.log({ updatedTele });
-    res.json({ success: true, payload: updatedTele });
+    res.json({ success: true, payload: updatedFilm });
   } catch (error) {
     console.log(error);
   }
   next();
 });
-*/
+
 module.exports = router;
