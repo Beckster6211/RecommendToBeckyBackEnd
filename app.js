@@ -10,6 +10,7 @@ const visitRouter = require("./routes/visit");
 const stayRouter = require("./routes/stay");
 const readRouter = require("./routes/read");
 const teleRouter = require("./routes/tele");
+const filmRouter = require("./routes/film");
 
 app.get("/", (req, res) => {
   res.send("Hello World!");
@@ -25,6 +26,7 @@ app.use("/visit", visitRouter);
 app.use("/stay", stayRouter);
 app.use("/read", readRouter);
 app.use("/tele", teleRouter);
+app.use("/film", filmRouter);
 
 app.listen(port, () => {
   console.log(`App listening at http://localhost:${port}`);

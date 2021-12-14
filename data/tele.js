@@ -14,7 +14,7 @@ let tele = [
   {
     tvShow: "WandaVision",
     provider: "Disney+",
-    connected: "Marvel films (part of Phase 4 of MCU), comic books",
+    connected: "Marvel films (part of Phase 4 MCU), comic books",
     genre: "Superhero, Fantasy, Drama, Comedy",
     numberOfSeries: 1,
     description:

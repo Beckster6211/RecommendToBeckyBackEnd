@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node -r dotenv/config app.js",
+    "start": "nodemon -r dotenv/config app.js",
     "create-food-table": "node db/scripts/food/createFoodTable.js",
     "populate-food-table": "node db/scripts/food/populateFoodTable.js",
     "drop-food-table": "node db/scripts/food/dropFoodTable.js",
@@ -20,6 +20,9 @@
     "create-tele-table": "node db/scripts/tv/createTeleTable.js",
     "populate-tele-table": "node db/scripts/tv/populateTeleTable.js",
     "drop-tele-table": "node db/scripts/tv/dropTeleTable.js",
+    "create-film-table": "node db/scripts/film/createFilmTable.js",
+    "populate-film-table": "node db/scripts/film/populateFilmTable.js",
+    "drop-film-table": "node db/scripts/film/dropFilmTable.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
