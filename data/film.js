@@ -28,7 +28,7 @@ let film = [
     connected: "LotR books, Hobbit book, Hobbit films",
     genre: "Fantasy, Adventure, Magic, Mystical",
     description:
-      "The future of civilization rests in the fate of the One Ring, which has been lost for centuries. Powerful forces are unrelenting in their search for it. But fate has placed it in the hands of a young Hobbit named Frodo Baggins (Elijah Wood), who inherits the Ring and steps into legend. A daunting task lies ahead for Frodo when he becomes the Ringbearer - to destroy the One Ring in the fires of Mount Doom where it was forged.",
+      "The future of civilization rests in the fate of the One Ring, which has been lost for centuries. Powerful forces are unrelenting in their search for it. But fate has placed it in the hands of a young Hobbit named Frodo Baggins, who inherits the Ring and steps into legend. A daunting task lies ahead for Frodo when he becomes the Ringbearer - to destroy the One Ring in the fires of Mount Doom where it was forged.",
     recommendedBy: "Many Bootcamp 4 (ringleader Shanice)",
     watched: true,
     beckyOpinion: "😕",
