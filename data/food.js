@@ -30,7 +30,7 @@ let food = [
   {
     food: "Smores",
     recipe: "Kit from store",
-    recommendedBy: "Me (+ American TV)",
+    recommendedBy: "Me (+ US TV)",
     isDone: false,
     beckyOpinion: "🤷‍♀️",
   },

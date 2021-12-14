@@ -21,7 +21,7 @@ let tele = [
       "Know you like Scarlet Witch 😄 Three weeks after the events of Avengers: Endgame, living idealized suburban lives, super-powered beings Wanda and Vision begin to suspect that everything is not as it seems in the town Westview.",
     recommendedBy: "Small Fry aka William (little brother)",
     binged: true,
-    beckyOpinion: "💖",
+    beckyOpinion: "🤩",
   },
   {
     tvShow: "Bridgerton",

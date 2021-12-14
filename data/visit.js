@@ -21,7 +21,7 @@ let visit = [
     why: "Home Wasps rugby 🐝",
     recommendedBy: "Me",
     visited: true,
-    beckyOpinion: "😃",
+    beckyOpinion: "👍",
   },
   {
     what: "Depot Climbing",
