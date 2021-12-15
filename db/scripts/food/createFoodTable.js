@@ -9,9 +9,9 @@ let sqlStatement = `CREATE TABLE IF NOT EXISTS foodTable(
     isDone BOOLEAN DEFAULT false
 );`;
 
-async function createTable() {
+async function createFoodTable() {
   let result = await query(sqlStatement);
   console.log(result);
 }
 
-createTable();
+createFoodTable();
