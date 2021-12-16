@@ -9,7 +9,7 @@ let food = [
   {
     food: "US Biscuits",
     recipe: "https://www.allrecipes.com/recipe/20075/basic-biscuits/",
-    recommendedBy: "Liz.K SoC Coach",
+    recommendedBy: "Liz.K (US) SoC Coach",
     isDone: false,
     beckyOpinion: "🤷‍♀️",
   },
