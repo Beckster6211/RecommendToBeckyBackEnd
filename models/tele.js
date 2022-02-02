@@ -1,5 +1,4 @@
 const { query } = require("../db");
-// const { food } = require("../food"); // think dont need this in food models file
 
 async function getAllTele() {
   const result = await query(`SELECT * FROM teleTable`);

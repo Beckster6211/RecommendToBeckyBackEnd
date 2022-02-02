@@ -1,5 +1,4 @@
 const { query } = require("../db");
-// const { food } = require("../food"); // think dont need this in food models file
 
 async function getAllFilm() {
   const result = await query(`SELECT * FROM filmTable`);
@@ -65,7 +64,7 @@ async function updateFilm(id, updatedFilm) {
     beckyOpinion,
     watched,
   } = updatedFilm;
-  //   console.log({ updatedTele });
+  //   console.log({ updatedFilm });
   const result = await query(
     `UPDATE filmTable SET film = $2, provider = $3, connected = $4, genre = $5, description = $6, recommendedBy = $7, beckyOpinion = $8, watched = $9 WHERE id = $1 RETURNING *`,
     [

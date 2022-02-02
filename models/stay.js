@@ -1,5 +1,4 @@
 const { query } = require("../db");
-// const { food } = require("../food"); // think dont need this in food models file
 
 async function getAllStay() {
   const result = await query(`SELECT * FROM stayTable`);
@@ -44,7 +43,7 @@ async function updateStay(id, updatedStay) {
   // console.log("inside models");
   const { what, location, details, recommendedBy, beckyOpinion, stayed } =
     updatedStay;
-  // console.log({ updatedVisit });
+  // console.log({ updatedStay });
   const result = await query(
     `UPDATE stayTable SET what = $2, location = $3, details = $4, recommendedBy = $5, beckyOpinion = $6, stayed = $7 WHERE id = $1 RETURNING *`,
     [id, what, location, details, recommendedBy, beckyOpinion, stayed]

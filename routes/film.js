@@ -50,7 +50,7 @@ router.patch("/:id", async (req, res, next) => {
     // console.log("patch request");
     // console.log({ update });
     let updatedFilm = await updateFilm(id, update);
-    // console.log({ updatedTele });
+    // console.log({ updatedFilm });
     res.json({ success: true, payload: updatedFilm });
   } catch (error) {
     console.log(error);

@@ -50,7 +50,7 @@ router.patch("/:id", async (req, res, next) => {
     // console.log("patch request");
     // console.log({ update });
     let updatedStay = await updateStay(id, update);
-    // console.log({ updatedVisit });
+    // console.log({ updatedStay });
     res.json({ success: true, payload: updatedStay });
   } catch (error) {
     console.log(error);
