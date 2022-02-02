@@ -28,9 +28,11 @@ app.use("/read", readRouter);
 app.use("/tele", teleRouter);
 app.use("/film", filmRouter);
 
+// this for local host credientials
 // app.listen(port, () => {
 //   console.log(`App listening at http://localhost:${port}`);
 // });
 
+// this for heroku credientials
 app.listen(process.env.PORT || 3000);
 module.exports = app;
