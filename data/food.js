@@ -1,7 +1,8 @@
 let food = [
   {
     food: "Deep fried Mars bar",
-    recipe: "At this rate Scotland",
+    recipe:
+      "At this rate Scotland (nowhere in Chelmsley Wood will deep fry my Mars bar)",
     recommendedBy: "Max Bootcamp 4",
     isDone: false,
     beckyOpinion: "🤷‍♀️",
